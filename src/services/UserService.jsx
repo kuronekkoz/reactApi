@@ -1,7 +1,8 @@
-import axios from 'axios';
+import axios from './custom-axios';
+
 
 const fetchAllUser= () => {
-return axios.get('https://reqres.in/api/users?page=2', {
+return axios.get('/api/users?page=1', {
         headers: {
             'x-api-key': 'reqres-free-v1'
         }

@@ -9,13 +9,15 @@ const TableUsers = (props) => {
 
     useEffect(()=>{
         //call api
+        //dry
        getUser()
     },[])
 
     const getUser = async() =>{
         let res = await fetchAllUser();
-        if(res && res.data && res.data.data){
-            setListUsers(res.data.data)
+        console.log(">>>>>>check res:",res);
+        if(res && res.data ){
+            setListUsers(res.data)
         }
 
         
