@@ -5,15 +5,14 @@ import TableUsers from './components/TableUsers'
 import  Container  from 'react-bootstrap/Container';
 import ModalAddNew from './components/ModalAddNew';
 import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 
 function App() {
 
-  const [isShowModalAddNew, setIsShowModelAddNew]= useState(false);
-  const handleClose = () =>{
-    setIsShowModelAddNew(false);
-  }
+ 
   return (
-    
+    <>
+
       <div className='app-container'>
        <Header/>
       <Container>
@@ -31,12 +30,21 @@ function App() {
       
       </Container>
 
-      <ModalAddNew 
-        show={isShowModalAddNew}
-        handleClose={handleClose}
-      />
+      
       </div>
-    
+    <ToastContainer
+position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick={false}
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+
+/>
+    </>
   )
 }
 
