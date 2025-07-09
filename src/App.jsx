@@ -16,17 +16,8 @@ function App() {
       <div className='app-container'>
        <Header/>
       <Container>
-      <div className='my-3 add-new'>
-        <span>
-          <b>
-            List user :
-          </b>
-        </span>
-        
-        <button className='btn btn-primary' onClick={() => setIsShowModelAddNew(true)}>Add new user </button>
-      </div>
+      
        <TableUsers/>
-
       
       </Container>
 

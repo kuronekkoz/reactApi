@@ -2,23 +2,22 @@ import axios from './custom-axios';
 
 
 const fetchAllUser= (page) => {
-return axios.get(`/api/users?page=${page}`, {
-        headers: {
-            'x-api-key': 'reqres-free-v1'
-        }
-    })  
+return axios.get(`/api/users?page=${page}`, )  
 }
 
 const postCreateUser = (name, job) => {
     return axios.post(
       "/api/users",
       { name, job }, // Đây là body
-      {
-        headers: {
-          'x-api-key': 'reqres-free-v1'
-        }
-      }
+      
     );
-  };
+};
+const putUpdateUser = ( name, job) => {
+  return axios.put(
+     `/api/users`,
+    { name, job }, // Đây là body
+    
+  );
+};
 
-export { fetchAllUser, postCreateUser };
+export { fetchAllUser, postCreateUser, putUpdateUser};
